@@ -26,7 +26,7 @@ def add(cname, cphone, cemail=None, caddress=None, *args, **kwargs):
 def update_contact(cid, cname, cphone, cemail, caddress):
     session.execute(update(ContactPerson).
                     where(ContactPerson.id == cid).
-                    values(name = cname, email = cemail, phone = cphone, address = caddress))
+                    values(name = cname, email = cemail, cell_phone = cphone, address = caddress))
 
     session.commit()
     print('Contact changed')
